@@ -22,7 +22,7 @@ Route::get('/', function () {
 // Route::get('/{name}', function ($name) {
 //     return 'hello!!!' . $name;
 // });
-//
-// Route::get('/', function () {
-//     return view('posts.index');
-// });
+
+Route::get('/', function () {
+    return view('posts.index');
+});
