@@ -25,5 +25,6 @@ Route::post('/posts', 'PostsController@store');
 Route::patch('/posts/{id}', 'PostsController@update');
 
 Route::delete('/posts/{id}', 'PostsController@destroy');
+Route::delete('/posts/{post}/comments/{comment}', 'CommentsController@destroy');
 
 Route::post('/posts/{post}/comments', 'CommentsController@store');

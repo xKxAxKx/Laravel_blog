@@ -24,4 +24,12 @@ class CommentsController extends Controller
       return redirect()
              ->action('PostsController@show', $post->id);
     }
+
+    public function destroy($postId, $commentId){
+        $post = Post::findOrFail($postId);
+        $post->comments()->findOrFail($commentId)->delete();
+        
+        return redirect()
+               ->action('PostsController@show', $post->id);
+    }
 }
